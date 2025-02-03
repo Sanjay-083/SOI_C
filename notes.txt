@@ -1,0 +1,6 @@
+gcc -E shift.c -o shift.i
+ gcc -S shift.i -o shift.s 
+ gcc -c shift.s -o shift.o
+ gcc shift.o -o shift 
+ .\shift
+
