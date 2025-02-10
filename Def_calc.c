@@ -1,39 +1,75 @@
-def add(x, y):
-    return x + y
+#include <stdio.h>
 
-def subtract(x, y):
-    return x - y
+float add(float x, float y)
+{
+    return x + y;
+}
 
-def multiply(x, y):
-    return x * y
+float subtract(float x, float y)
+{
+    return x - y;
+}
 
-def divide(x, y):
-    if y == 0:
-        return "Error! Division by zero."
-    return x / y
+float multiply(float x, float y)
+{
+    return x * y;
+}
 
-def calculator():
-    print("Select operation:")
-    print("1. Add")
-    print("2. Subtract")
-    print("3. Multiply")
-    print("4. Divide")
+float divide(float x, float y)
+{
+    if (y == 0)
+    {
+        printf("Error! Division by zero.\n");
+        return 0;
+    }
+    return x / y;
+}
 
-    choice = input("Enter choice (1/2/3/4): ")
+int main()
+{
+    int choice;
+    float num1, num2, result;
 
-    if choice in ('1', '2', '3', '4'):
-        num1 = float(input("Enter first number: "))
-        num2 = float(input("Enter second number: "))
+    printf("Select operation:\n");
+    printf("1. Add\n");
+    printf("2. Subtract\n");
+    printf("3. Multiply\n");
+    printf("4. Divide\n");
 
-        if choice == '1':
-            print(f"Result: {add(num1, num2)}")
-        elif choice == '2':
-            print(f"Result: {subtract(num1, num2)}")
-        elif choice == '3':
-            print(f"Result: {multiply(num1, num2)}")
-        elif choice == '4':
-            print(f"Result: {divide(num1, num2)}")
-    else:
-        print("Invalid input")
+    printf("Enter choice (1/2/3/4): ");
+    scanf("%d", &choice);
 
-calculator()
+    if (choice >= 1 && choice <= 4)
+    {
+        printf("Enter first number: ");
+        scanf("%f", &num1);
+        printf("Enter second number: ");
+        scanf("%f", &num2);
+
+        switch (choice)
+        {
+        case 1:
+            result = add(num1, num2);
+            printf("Result: %.2f\n", result);
+            break;
+        case 2:
+            result = subtract(num1, num2);
+            printf("Result: %.2f\n", result);
+            break;
+        case 3:
+            result = multiply(num1, num2);
+            printf("Result: %.2f\n", result);
+            break;
+        case 4:
+            result = divide(num1, num2);
+            printf("Result: %.2f\n", result);
+            break;
+        }
+    }
+    else
+    {
+        printf("Invalid input\n");
+    }
+
+    return 0;
+}
