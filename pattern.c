@@ -1,25 +1,16 @@
 #include <stdio.h>
-
 void main()
 {
-   /* 
-    int row = 3, col = 6;
-    for (int i = 1; i <= row; i++)
+    int n, i, j;
+    printf("enter the n value:");
+    scanf("%d", &n);
+    for (i = 0; i < n; i++)
     {
-        for (int j = 1; j <= col; j++)
+        for (j = 0; j < i+1; j++)
         {
             printf("*");
         }
-        printf("\n"); 
-    }*/
-
-   int row = 3, col = 6;
-   for (int i = 1; i <= row; i++)
-   {
-       for (int j = 1; j <= col; j++)
-       {
-           printf("*");
-       }
-       printf("\n");
-   }
+        printf("\n");
+    }
+    
 }
