@@ -1,5 +1,4 @@
 #include <stdio.h>
-
 int main()
 {
     int size;
@@ -18,7 +17,6 @@ int main()
     {
         printf("arr[%d] = %d\n", i, arr[i]);
     }
-
     // Calculate the sum of the elements in the array
     int sum = 0;
     for (int i = 0; i < size; i++)
