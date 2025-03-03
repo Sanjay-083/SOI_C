@@ -6,6 +6,8 @@ void main()
     for (r = 1; r <= 10; r++)
     {
         sum += r + 1;
-        }
+    }
     printf("The roll no is %d\n", sum);
+
+    return 0;
 }

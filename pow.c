@@ -11,7 +11,7 @@ void main()
     int res = 1;
     while (pow > 0)
     {
-        res = res * n;
+        res = res * n; 
         pow--;
     }
     printf("The Answer is :%d", res);
