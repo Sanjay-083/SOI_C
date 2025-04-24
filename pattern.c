@@ -141,14 +141,14 @@ for (i = 1; i <= n; i++)
     }
 }*/
 /*void main()
-{* * * * 
+{ * * * * 
     * * * 
       * * 
         * 
     int i, j, n = 4;
     for (i = 1; i <= n; i++) // rows
     {
-        for (int space = 1; space <= i; space++)
+        for (int space = 1; space < i; space++)
         {
             printf("  "); 
         }
